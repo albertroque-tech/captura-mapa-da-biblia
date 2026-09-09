@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mapa da Bíblia | Escola do Caminho</title>
+    <style>
+        :root {
+            --dourado: #E5A910;
+            --fundo: #121212;
+            --texto: #F5F5F5;
+        }
+        body {
+            background-color: var(--fundo);
+            color: var(--texto);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1, h2, h3 {
+            color: var(--dourado);
+            line-height: 1.2;
+        }
+        h1 { font-size: 2.2rem; text-align: center; margin-bottom: 20px; }
+        h2 { font-size: 1.8rem; margin-top: 40px; }
+        
+        /* Carrossel Dinâmico CSS */
+        .carrossel-wrapper {
+            margin: 40px 0;
+        }
+        .carrossel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding-bottom: 15px;
+        }
+        .carrossel::-webkit-scrollbar {
+            height: 8px;
+        }
+        .carrossel::-webkit-scrollbar-thumb {
+            background: var(--dourado);
+            border-radius: 4px;
+        }
+        .carrossel img {
+            width: 85%;
+            max-width: 350px;
+            scroll-snap-align: center;
+            flex: 0 0 auto;
+            border: 2px solid var(--dourado);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(229, 169, 16, 0.2);
+        }
+
+        /* Seção do Autor */
+        .autor-box {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid var(--dourado);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .autor-box img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--dourado);
+            object-fit: cover;
+        }
+        
+        /* Botão Pulsante */
+        .botao {
+            display: block;
+            background-color: var(--dourado);
+            color: #000;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 40px auto;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(229, 169, 16, 0.4);
+            transition: transform 0.2s;
+        }
+        .botao:active { transform: scale(0.95); }
+
+        @media (max-width: 600px) {
+            .autor-box { flex-direction: column; text-align: center; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>Você já sentiu que a Bíblia é um amontoado de histórias desconexas e difíceis de encaixar?</h1>
+    
+    <p>Você abre a Bíblia com vontade de aprender. Mas ao se deparar com leis antigas, profecias complexas e genealogias intermináveis, a leitura trava. Em vez de clareza, vem a confusão. Você fecha o livro com a sensação de que falta uma peça no quebra-cabeça. Isso soa familiar?</p>
+
+    <h2>O que você e a sua igreja estão perdendo com isso?</h2>
+    <p>Pare e pense: quantas vezes você deixou de falar sobre a Palavra por insegurança? Quantas vezes a sua congregação deixou de ser edificada porque você teve medo de interpretar um texto de forma errada? Quando não compreendemos a verdadeira história bíblica, nós perdemos a confiança para ensinar, e a igreja perde a profundidade que só a verdade traz.</p>
+
+    <h2>Você não precisa de mais força de vontade. Você precisa de um mapa.</h2>
+    <p>A grande verdade é que a Bíblia não é uma confusão. Ela é um território vasto e maravilhoso. Mas nenhum explorador entra em uma terra desconhecida sem as ferramentas certas. Apresento a você o <strong>Mapa da Bíblia</strong>. Um material direto ao ponto, criado para conectar as pontas soltas da sua leitura.</p>
+
+    <div class="carrossel-wrapper">
+        <div class="carrossel">
+            <img src="capa.jpg.jpg" alt="Capa do E-book">
+            <img src="trilha.jpg.jpg" alt="Trilhas do Mapa">
+            <img src="metanarrativa.jpg.jpg" alt="Metanarrativa">
+            <img src="jesus.jpg.jpg" alt="A Solução">
+        </div>
+        <p style="text-align: center; font-size: 0.9rem; color: #aaa;">Deslize para ver o material ➔</p>
+    </div>
+
+    <p>Neste e-book gratuito, você vai encontrar:</p>
+    <ul>
+        <li><strong>A Metanarrativa completa:</strong> entenda a Criação, Queda, Redenção e Consumação.</li>
+        <li><strong>O eixo central:</strong> como a história de Gênesis a Apocalipse aponta para um único evento.</li>
+        <li><strong>Uma divisão clara e estruturada:</strong> para você nunca mais se perder no Antigo e no Novo Testamento.</li>
+    </ul>
+
+    <div class="autor-box">
+        <img src="perfil.jpg.jpg" alt="Profº Albert Roque">
+        <div>
+            <h3 style="margin-top: 0;">Quem será o seu guia?</h3>
+            <p style="margin-bottom: 0;">Sou o <strong>Profº Albert Roque</strong>. Como historiador e especialista em gestão educacional, dedico a minha vida a ensinar teologia com profundidade, responsabilidade e clareza. Meu objetivo é pegar toda a complexidade histórica das Escrituras e entregar a você de uma forma estruturada, para que você tenha segurança absoluta naquilo que lê e ensina.</p>
+        </div>
+    </div>
+
+    <h2>Baixe o seu Mapa Gratuitamente</h2>
+    <p>Para garantir que você receba o material e não perca nenhum conteúdo extra, o download oficial acontece dentro do nosso Grupo de Estudos no WhatsApp. Fique tranquilo: <strong>é um grupo silencioso e 100% livre de spam.</strong> Sem mensagens de "bom dia" e sem incomodação. Apenas o link do seu e-book e conteúdos teológicos de alto nível.</p>
+
+    <!-- ATENÇÃO: COLOQUE SEU LINK DO GRUPO DO WHATSAPP ENTRE AS ASPAS ABAIXO -->
+    <a href="https://chat.whatsapp.com/E8BmUUtna0BBmnpMigCeSZ" class="botao">QUERO ENTRAR NO GRUPO E BAIXAR O MAPA</a>
+
+</div>
+
+</body>
+</html>
