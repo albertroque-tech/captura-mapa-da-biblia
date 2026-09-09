@@ -27,13 +27,62 @@
             color: var(--dourado);
             line-height: 1.2;
         }
-        h1 { font-size: 2.2rem; text-align: center; margin-bottom: 20px; }
+        h1 { font-size: 2.2rem; text-align: center; margin-bottom: 30px; }
         h2 { font-size: 1.8rem; margin-top: 40px; }
-        
-        /* Carrossel Dinâmico CSS */
-        .carrossel-wrapper {
-            margin: 40px 0;
+
+        /* --- NOVOS ESTILOS VISUAIS --- */
+        @keyframes pulso-suave {
+            0% { transform: scale(1); text-shadow: 0 0 0 rgba(229, 169, 16, 0); }
+            50% { transform: scale(1.03); text-shadow: 0 0 20px rgba(229, 169, 16, 0.7); }
+            100% { transform: scale(1); text-shadow: 0 0 0 rgba(229, 169, 16, 0); }
         }
+        .texto-pulsante {
+            animation: pulso-suave 2.5s infinite;
+            display: inline-block;
+            color: #FFF;
+            background-color: rgba(229, 169, 16, 0.15);
+            padding: 2px 10px;
+            border-radius: 5px;
+            border: 1px solid var(--dourado);
+        }
+
+        .box-dor {
+            background: linear-gradient(90deg, #1a1a1a 0%, #121212 100%);
+            border-left: 5px solid var(--dourado);
+            padding: 20px 25px;
+            border-radius: 0 10px 10px 0;
+            margin: 20px 0;
+            font-size: 1.15rem;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .lista-impacto {
+            list-style: none;
+            padding: 0;
+        }
+        .lista-impacto li {
+            background-color: #181818;
+            margin-bottom: 12px;
+            padding: 18px 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: transform 0.2s;
+        }
+        .lista-impacto li:hover {
+            transform: translateX(5px);
+            border-color: var(--dourado);
+        }
+        .icone-lista {
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+        /* ----------------------------- */
+
+        /* Carrossel Dinâmico CSS */
+        .carrossel-wrapper { margin: 40px 0; }
         .carrossel {
             display: flex;
             overflow-x: auto;
@@ -41,9 +90,7 @@
             gap: 20px;
             padding-bottom: 15px;
         }
-        .carrossel::-webkit-scrollbar {
-            height: 8px;
-        }
+        .carrossel::-webkit-scrollbar { height: 8px; }
         .carrossel::-webkit-scrollbar-thumb {
             background: var(--dourado);
             border-radius: 4px;
@@ -76,7 +123,7 @@
             border: 3px solid var(--dourado);
             object-fit: cover;
         }
-        
+
         /* Botão Pulsante */
         .botao {
             display: block;
@@ -104,16 +151,39 @@
 <body>
 
 <div class="container">
-    
-    <h1>Você já sentiu que a Bíblia é um amontoado de histórias desconexas e difíceis de encaixar?</h1>
-    
-    <p>Você abre a Bíblia com vontade de aprender. Mas ao se deparar com leis antigas, profecias complexas e genealogias intermináveis, a leitura trava. Em vez de clareza, vem a confusão. Você fecha o livro com a sensação de que falta uma peça no quebra-cabeça. Isso soa familiar?</p>
+
+    <h1>Você já sentiu que a Bíblia é um amontoado de histórias <span class="texto-pulsante">desconexas</span> e difíceis de encaixar?</h1>
+
+    <div class="box-dor">
+        <p style="margin-top: 0;">📖 Você abre a Bíblia com vontade de aprender. Mas ao se deparar com leis antigas, profecias complexas e genealogias intermináveis, <strong>a leitura trava.</strong></p>
+        <p style="margin-bottom: 0;">🧩 Em vez de clareza, vem a confusão. Você fecha o livro com a sensação de que falta uma peça no quebra-cabeça. <strong>Isso soa familiar?</strong></p>
+    </div>
 
     <h2>O que você e a sua igreja estão perdendo com isso?</h2>
-    <p>Pare e pense: quantas vezes você deixou de falar sobre a Palavra por insegurança? Quantas vezes a sua congregação deixou de ser edificada porque você teve medo de interpretar um texto de forma errada? Quando não compreendemos a verdadeira história bíblica, nós perdemos a confiança para ensinar, e a igreja perde a profundidade que só a verdade traz.</p>
+    <p>Pare e pense:</p>
+
+    <ul class="lista-impacto">
+        <li>
+            <span class="icone-lista">📉</span>
+            <div>Quantas vezes você deixou de falar sobre a Palavra por <strong>insegurança</strong>?</div>
+        </li>
+        <li>
+            <span class="icone-lista">⚠️</span>
+            <div>Quantas vezes a sua congregação deixou de ser edificada porque você teve <strong>medo de interpretar</strong> um texto de forma errada?</div>
+        </li>
+        <li>
+            <span class="icone-lista">🛑</span>
+            <div>Quando não compreendemos a verdadeira história bíblica, nós <strong>perdemos a confiança para ensinar</strong>, e a igreja perde a profundidade que só a verdade traz.</div>
+        </li>
+    </ul>
 
     <h2>Você não precisa de mais força de vontade. Você precisa de um mapa.</h2>
-    <p>A grande verdade é que a Bíblia não é uma confusão. Ela é um território vasto e maravilhoso. Mas nenhum explorador entra em uma terra desconhecida sem as ferramentas certas. Apresento a você o <strong>Mapa da Bíblia</strong>. Um material direto ao ponto, criado para conectar as pontas soltas da sua leitura.</p>
+
+    <div class="box-dor" style="border-left-color: #4CAF50; background: linear-gradient(90deg, #112211 0%, #121212 100%);">
+        <p style="margin: 0;">🧭 A grande verdade é que a Bíblia não é uma confusão. Ela é um território vasto e maravilhoso. Mas nenhum explorador entra em uma terra desconhecida sem as ferramentas certas.</p>
+    </div>
+
+    <p>Apresento a você o <strong>Mapa da Bíblia</strong>. Um material direto ao ponto, criado para conectar as pontas soltas da sua leitura.</p>
 
     <div class="carrossel-wrapper">
         <div class="carrossel">
